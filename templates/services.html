@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xizmatlarim</title>
+        <link rel="stylesheet" href="{% static '.\css\main.css' %}">
+    </head>
+    <body class="indexback">
+        <div class="clear"></div>
+
+        <div id="grad" class="base">
+           
+            <img id="rasm" src="{% static '.\images\person.png' %}" alt="logo"> 
+            
+            <ul class="ull">
+                <li class="ul-items"><a href="{% url 'Home' %}"> Asosiy </a></li>
+                <li class="ul-items"><a href="{% url 'About' %}">Men haqimda</a></li>
+                <li class="ul-items"><a href="{% url 'Portfolio' %}"> Loyihalar</a></li>
+                <li class="ul-items"><a class="active" href="{% url 'Services' %}"> Xizmatlarim</a></li>
+                <li class="ul-items"><a href="{% url 'Contact' %}"> Bog‘lanish</a></li>
+            </ul>
+            
+        </div>
+        <div class="conteiner pastga">
+        <div class="conteiner scrol">
+        <h3 id="salom">Mening xizmatlarim <span class="blur-line"></span></h3>
+        <h2 class="ism">Men taklif qilayotgan xizmatlar</h2>
+        
+        <div class="card">
+            <a href="{% url 'Contact' %}">
+            <div class="cards">
+                <img src="{% static './images/frond.png' %}" alt="frontend">
+                <div style="padding-top:20px">
+                    <h3>Frontend</h5>
+                    <p>Html CSS JS</p>
+                </div>
+            </div>
+        </a>
+            <a href="{% url 'Contact' %}">
+            <div class="cards">
+                <img src="{% static './images/bot.png' %}" alt="bot">
+                <div style="padding-top:5px">
+                    <h3>Telegram bot</h5>
+                    <p>Airgram</p>
+                </div>
+            </div>
+            </a>
+            <a href="{% url 'Contact' %}">
+            <div class="cards">
+                <img src="{% static './images/back.png' %}" alt="back">
+                <h3>Backend</h5>
+                <p>Django SQLite</p>
+            </div>
+        </a>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

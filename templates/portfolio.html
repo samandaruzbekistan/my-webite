@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="{% static '.\css\main.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="indexback">
+
+        <div id="grad" class="base">
+           
+            <img id="rasm" src="{% static '.\images\person.png' %}" alt="logo"> 
+            
+            <ul class="ull">
+                <li class="ul-items"><a href="{% url 'Home' %}"> Asosiy </a></li>
+                <li class="ul-items"><a href="{% url 'About' %}">Men haqimda</a></li>
+                <li class="ul-items"><a class="active" href="{% url 'Portfolio' %}"> Loyihalar</a></li>
+                <li class="ul-items"><a href="{% url 'Services' %}"> Xizmatlarim</a></li>
+                <li class="ul-items"><a href="{% url 'Contact' %}"> Bog‘lanish</a></li>
+            </ul>
+            
+        </div>
+        <div class="conteiner portfolio">
+        <div id="salom">
+            <h3>Loyihalarim<span><div class="blur-line"></div></span></h3>
+        </div>
+        <div class="ism">
+            Mening ishlarimni ko'ring
+        </div>
+
+        <div class="loyiha-img">
+
+            <div class="loyiha-sayt">
+                <img src="{% static './images/bot-logo.png' %}" alt="">
+                <h3 style="color: rgb(53, 84, 255); text-align: center;">Telegram bot</h2>
+                <h2 style="text-align: center; color: rgb(99, 1, 102);">O'zbekcha wikipedia</h2>
+                <a href="{% url 'Bot' %}">
+                    <button type="button" class="gradient-button gradient-button-4 center">
+                        BATAFSIL
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="loyiha-sayt">
+                <img src="{% static './images/person.png' %}">
+                <h3 style="color: rgb(53, 84, 255); text-align: center;">Portfolio</h2>
+                    <h2 style="text-align: center; color: rgb(99, 1, 102);">Website</h2>
+                    <a href="{% url 'Home' %}">
+                        <button type="button" class="gradient-button gradient-button-4 center">
+                            BATAFSIL
+                        </button>
+                    </a>
+            </div>
+
+        </div>
+        </div>
+    </body>
+</html>
